@@ -1,8 +1,10 @@
-vte
-===
+atuin-vte
+=========
 
-[![Build Status](https://travis-ci.org/alacritty/vte.svg?branch=master)](https://travis-ci.org/alacritty/vte)
-[![Crates.io Version](https://img.shields.io/crates/v/vte.svg)](https://crates.io/crates/vte/)
+[![Crates.io Version](https://img.shields.io/crates/v/atuin-vte.svg)](https://crates.io/crates/atuin-vte/)
+
+Atuin's fork of [vte], published for [Atuin] to depend on. Use upstream unless
+you need something only this fork carries.
 
 Parser for implementing virtual terminal emulators in Rust.
 
@@ -16,4 +18,6 @@ useful with the parsed data. The `Parser` handles the book keeping, and the
 See the [docs] for more info.
 
 [Paul Williams' ANSI parser state machine]: https://vt100.net/emu/dec_ansi_parser
-[docs]: https://docs.rs/crate/vte/
+[docs]: https://docs.rs/crate/atuin-vte/
+[vte]: https://github.com/alacritty/vte
+[Atuin]: https://github.com/atuinsh/atuin
