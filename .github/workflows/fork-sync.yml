@@ -1,0 +1,24 @@
+name: fork-sync
+
+on:
+  schedule:
+    # Off the hour: GitHub delays and drops scheduled runs queued at :00.
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tgymnich/fork-sync@e905b254d56ebb367514cd05fa96bf7516bd2a5a # v2.0.10
+        with:
+          owner: alacritty
+          head: master
+          base: master
+          # master carries this workflow on top of upstream, so it cannot
+          # fast-forward; a merge commit keeps the upstream SHAs intact.
+          merge_method: merge
