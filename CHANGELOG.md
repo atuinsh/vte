@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-## Unreleased
+## 0.15.1
 
 - `Parser::is_reading_escape_code` and `Parser::is_mid_char` tell whether the
     parser is partway through an escape code or a UTF-8 character
